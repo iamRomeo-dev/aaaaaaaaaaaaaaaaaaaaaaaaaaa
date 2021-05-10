@@ -1,17 +1,28 @@
- import data from "./data.js";
+import data from "./data.js";
+import { getUsers } from "./API.js";
 
-// fetch("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/FishEyeData.json", {mode: 'cors'})
-// .then(response => response.json())
-// .then(response => console.log(response))
+//===========================Example for getting the data===========================
+// const mimiKeel = document.getElementById("mimiKeel");
+// mimiKeel.innerHTML = data.photographers[0].name;
 
-const mimiKeel = document.getElementById("mimiKeel");
-mimiKeel.innerHTML = data.photographers[0].name;
+// console.log("aaaaa");
+// console.log(data.photographers[0].name);
+// console.log("bbbbb");
+//===========================EO Example for getting the data===========================
 
-console.log("aaaaa")
- console.log(data.photographers[0].name)
-console.log("bbbbb")
+//===========================Getting datas with fetch===========================
+// export async function getDatas() {
+//     const users = await getUsers();
+//    console.log(users)
+//     const photographerName = document.getElementsByClassName("photographerName");
+//   for (let x=0 ; x < photographerName.length ; x++ ) {
+//     photographerName[x].innerHTML = users.photographers[x].name;
+//  }
+//   }
+//   getDatas()
+//===========================EO Getting datas with fetch===========================
 
-
- 
-// idUser.textContent = user._id;
-// li.appendChild(button);
+const photographerName = document.getElementsByClassName("photographerName");
+for (let x = 0; x < photographerName.length; x++) {
+  photographerName[x].innerHTML = data.photographers[x].name;
+}

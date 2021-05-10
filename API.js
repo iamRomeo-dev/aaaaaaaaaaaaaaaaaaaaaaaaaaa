@@ -1,4 +1,4 @@
-const url = "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/FishEyeData.json";
+const url = "https://iamromeo-dev.github.io/aaaaaaaaaaaaaaaaaaaaaaaaaaa/data.json";
 
 export async function getUsers() {
   const res = await fetch(url);
@@ -7,6 +7,10 @@ export async function getUsers() {
   }
   throw new Error(`${res.statusText} (${res.status})`);
 }
+
+// fetch("https://iamromeo-dev.github.io/aaaaaaaaaaaaaaaaaaaaaaaaaaa/aaa.json")
+// .then(response => response.json())
+// .then(res=>console.log(res))
 
 export async function deleteUser(id) {
   await fetch(`${url}/${id}`, {
